@@ -6,7 +6,7 @@ type ButtonType = {
 }
 
 
- const Button = (props: ButtonType) => {
+const Button = (props: ButtonType) => {
 
     const onClickHandler = () => {
         return props.callBack

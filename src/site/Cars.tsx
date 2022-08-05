@@ -1,24 +1,39 @@
-type StudentsType = {
+type CarType = {
     id: number
-    name: string
-    age: number
+    manufacturer: string
+    model: string
 }
 
-type NewComponentType = {
-    // students: StudentsType[]
-    //or
-    students: Array<StudentsType>
+type TopCarsType = {
+    cars: Array<CarType>
 }
 
-export const Cars = (props: NewComponentType) => {
+
+export const TopCars = (props: TopCarsType) => {
+
     return (
         <div>
 
-            {props.students.map((objectStudentsArray, index) => {
-                    return (
+            {props.cars.map((cars, index) => {
 
-                    )
-                })}
+                return (
+                    <table key={index}>
+                        <tr>
+                            <th>n/n</th>
+                            <th>{cars.id}</th>
+                        </tr>
+                        <tr>
+                            <td>Manufacturer</td>
+                            <td>{cars.manufacturer}</td>
+                        </tr>
+                        <tr>
+                            <td>Model</td>
+                            <td>{cars.model}</td>
+                        </tr>
+                    </table>
+                )
+            })}
         </div>
+
     )
 }

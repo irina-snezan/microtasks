@@ -1,0 +1,13 @@
+.todolist {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin-top: 10px;
+}
+
+.todolistItem {
+    padding: 10px;
+}
+.todolistItemButton {
+    margin-left: 10px;
+}
