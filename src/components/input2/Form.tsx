@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Input from './Input';
 import {Button} from './Button';
-
+import style from './Form.module.css'
 type FormType = {
 
 }
@@ -25,9 +25,11 @@ export const Form = (props: FormType) => {
     }
 
     return (
-        <div className={'input'}>
+        <div >
+            <div className={style.form}>
             <Input setTitle={setTitle} title={title}/>
             <Button name={'+'} callback={callbackButtonHandler}/>
+            </div>
             {message.map((el, index) => {
                 return (
                     <div key={index}>{el.message}</div>

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import Button from './components/Button';
+import Button from './components/button/Button';
 import {Money} from './site/Money';
 import {Hooks} from './site/Hooks';
 import Input from './components/input/Input';
@@ -34,31 +34,20 @@ function App() {
             {id: 11, name: 'Christopher', age: 100},
         ])
 
-    const Button1Foo = (subscriber: string, age: number) => {
-        console.log(subscriber, age)
-    }
-    const Button2Foo = (subscriber: string, age: number) => {
-        console.log(subscriber, age)
-    }
-    const Button3Foo = () => {
-        console.log('I am stupid button')
-    }
 
     return (
         <div>
             <h2>Input</h2>
             <Input message={'message'}/>
             <h2>Input2</h2>
-            <Form />
+            <Form/>
             <h2>Counter</h2>
             <Hooks/>
             <h2>Filtering money</h2>
             <Money/>
             <NewComponent students={students}/>
             <h2>Button</h2>
-            <Button name={'MyYoutubeChanel-1'} callBack={() => Button1Foo('Hello! I am IVAN', 23)}/>
-            <Button name={'MyYoutubeChanel-2'} callBack={() => Button2Foo('Hello! I am Ira', 38)}/>
-            <Button name={'Stupid button'} callBack={Button3Foo}/>
+            <Button />
             <h2>Counter2</h2>
             <Plus/>
             <h2>Filtering money</h2>
