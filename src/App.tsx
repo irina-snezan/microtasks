@@ -9,7 +9,8 @@ import {NewComponent} from './site/NewComponent';
 import {Money2} from './site/Money2';
 import TaskArrayTodolist from './components/todolistArray/TaskArrayTodolist';
 import {Form} from './components/input2/Form';
-
+import {Button2} from './components/Button2/Button2';
+import Fruits from './components/Fruits/Fruirs';
 
 export  type StudentsType = {
     id: number
@@ -32,9 +33,17 @@ function App() {
             {id: 9, name: 'Thomas', age: 88},
             {id: 10, name: 'Charles', age: 98},
             {id: 11, name: 'Christopher', age: 100},
-        ])
+        ]);
 
-
+    const button1Foo = (subscriber: string) => {
+        console.log(subscriber)
+    };
+        const  button2Foo = (subscriber2: string) => {
+            console.log(subscriber2)
+        };
+    const  button3Foo = (subscriber3: string) => {
+        console.log(subscriber3)
+    };
     return (
         <div>
             <h2>Input</h2>
@@ -54,6 +63,11 @@ function App() {
             <Money2/>
             <h2>Associative array</h2>
             <TaskArrayTodolist/>
+            <Button2 name={'цісні'} callback={() =>  button1Foo('вітаю, дружа!')}/>
+            <Button2 name={'цісні'} callback={() =>  button2Foo('вітаю')}/>
+            <Button2 name={'Stupid button'} callback={() =>  button3Foo('I am stupid button')}/>
+            <h2>Fruits filter</h2>
+            <Fruits/>
         </div>
     )
 }

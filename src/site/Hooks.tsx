@@ -6,7 +6,7 @@ type HooksType = {}
 
 export const Hooks = (props: HooksType) => {
 
-    let [a, setA] = useState(1)
+    let [a, setA] = useState(0)
     const onclickHandler = () => {
         setA(++a);
         console.log(a);
